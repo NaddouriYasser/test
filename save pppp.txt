@@ -1,0 +1,609 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.2 (30/3/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt,fleqn]{book} % Default font size and left-justified equations
+
+
+\usepackage[french]{babel}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{lipsum} % Package for generating dummy text
+\geometry{a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm}
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate [below=12cm] (midpoint) at (current page.north);
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{backgroundYasser.pdf}}; % Background image
+\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering RAPPORT	DE STAGE\\[15pt] % Book title
+{ Yasser NADDOURI}\\[20pt] % Subtitle
+{\small Stage d’observation -- Du 01 au 31 Aout 2023 -- \\ Direction Etudes et Travaux Eau et Assainissement
+}}}; % Author name
+\end{tikzpicture}};
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{chapter_head_1.pdf} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+%\part{Part One}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter*{Remerciements}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Remerciements}}
+
+Avant d'entamer ce rapport, je tiens vivement à remercier toute personne qui a contribué à mon intégration au monde de l'entreprise à travers ce stage.
+Je tiens à remercier chaleureusement mon encadrant de stage ainsi que toutes les personnes qui m'ont accompagné tout au long de mon stage, que ce soit au sein des bureaux de \textbf{REDAL} ou lors des sorties sur les chantiers.
+
+
+\chapter{Presentation de l'entreprise}
+
+\section{Objectifs du stage}
+
+Le présent rapport décrit l'ensemble des connaissances que j'ai pu acquérir et découvrir pendant ma période de stage qui s'est étalée sur un mois :
+\begin{itemize}
+\item Découvrir l'ensemble des divisions qui composent la régie 
+\item Découvrir le patrimoine de la régie (ouvrages de stockage d'eau potable, les réseaux d'eau potable, d'assainissement et d'électricité, les différentes stations de relevage, les postes de livraison d'électricité, etc.) 
+\item Découvrir la méthodologie de travail de chaque service.
+\end{itemize}
+\section{Présentation du groupe VEOLIA}
+Depuis sa création en 1914 et avec une présence dans 40 pays étalés sur 5 continents, dont 15 en Afrique, le groupe place le développement durable au cœur de ses préoccupations, et ça travers ses trois activités principales : La gestion de l'eau, des déchets et de l'énergie, mais aussi grâce à ses trois autres activités complémentaires à savoir le développement de l'accès aux ressources, la préservation des ressources disponibles et leur renouvellement.
+Avec un chiffre d'affaires de 21.125 milliards d'euros réalisé en 2017, la multinationale française VEOLIA compte en son actif 96 millions d'habitants en eau portable, 62 millions en assainissement, la production de 55 millions de mégawattheures et 47 millions de tonnes de déchets valorisés.
+
+Veolia au Maroc, ses 16 ans d'investissement au profit des populations de Rabat- Salé, avec 5327 MDH de cumul des investissements réalisés depuis 2002, dont l'amélioration des
+conditions d'accueil dans les agences commerciales (24 agences commerciales et 4 agences mobiles), la mise en œuvre d'un programme de branchements sociaux dans les quartiers non structurés et la mise en place d'innovations au service de leurs clients telles que de nouvelles solutions alternatives de paiement, un nouveau réseau de proximité, le lancement de la démarche engagement de services, la mise en œuvre des bornes d'information en agence et bien d'autres innovations que nous découvrirons à travers la filiale de Veolia Maroc : Redal.
+
+L'effet des initiatives de communication mises en place par Redal auprès du grand public, malgré d'importants investissements, a permis au groupe de s'affirmer sur le marché marocain de la distribution de l'eau, de l'électricité et de l'assainissement. Cette position forte a ouvert la voie à la création de deux filiales au Maroc, Amendis et Redal.
+\section{Présentation de l'activité de REDAL}
+
+\textbf{REDAL} est une entreprise chargée de la gestion délègue des services de la distribution d'électricité, d'eau potable et assainissement liquide, réparti presque sur 23 Communs et Arrondissements de Rabat, Salé, Temara, Skhirat ainsi que Bouznika et Charrat.
+
+Le réseau eau couverte 69 secteurs hydrauliques réparti presque sur 4500 Km de réseau de l'eau potable :
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Figure1.png}
+\caption{Rabat 21 secteurs, Temara/Skhirat 19 secteurs, Sale/Bouknadel 29 secteurs}
+\end{figure}
+\newpage
+\section{Missions de Redal }
+
+Les missions de Redal sont multiples et varie en fonction du secteur :
+
+\subsection{La distribution de l'eau potable}
+
+\begin{itemize}
+\item Assurer la continuité d'alimentation par l'entretien et la maintenance des ouvrages et des réseaux
+\item Réductions des délais d'intervention afin de limiter les coupures d'eau.
+\item Amélioration des moyens de surveillance de la qualité de l'eau 
+\item Favorisation de l'accès à l'eau aux populations à faibles revenu par la réalisation de Branchements Sociaux
+\end{itemize}
+
+\subsection{La distribution de l'électricité}
+
+\begin{itemize}
+\item Renforcer la sécurité d'alimentation.
+\item Améliorer la qualité de la fourniture en réduisant le nombre d'incidents et le temps de coupure sur incidents ou pour travaux
+\item Améliorer le rendement du réseau, notamment par la poursuite de la mise sous contrôle des consommations illicites
+\item Favoriser l'accès à l'électricité des populations rurales et des populations défavorisées
+\item Amélioration de la qualité du service rendu aux clients.
+\end{itemize}
+
+\subsection{La collecte et le traitement des eaux usées }
+
+\begin{itemize}
+\item Collecter et traiter les eaux usées pour améliorer la qualité de vie et l'environnement des habitants.
+\item Maintenir la stabilité et la longévité du réseau en effectuant des interventions de réparation et de maintenance.
+\item Assurer un service rapide et de qualité pour répondre aux exigences des clients
+\item Effectuer les interventions de vidange des fosses septiques dans les zones non assainies collectivement.
+\item Garantir le fonctionnement normal du réseau d'assainissement lors des périodes de pluie.
+\item Assurer le bon fonctionnement des stations de pompage.
+\item Assurer le bon fonctionnement des stations de prétraitement et d'épuration.
+\item La planification et la mise en œuvre de projets visant à moderniser et étendre les infrastructures, notamment les canalisations
+\item Réalisation des branchements particuliers
+\end{itemize}
+
+\section{Engagements de Redal }
+
+\begin{itemize}
+\item L'utilisation de matériaux garantissant l'étanchéité des réseaux d'assainissement 
+\item Effectuer des analyses sur l'incidence des déversements d'eaux polluées afin de contribuer à l'élaboration de normes environnementales plus avancées.
+\item Répondre aux demandes de modification des canalisations, des infrastructures et des équipements formulées par les autorités compétentes. (Les coûts liés aux déplacements et aux modifications seront pris en charge par l'entité ayant formulé la demande. Cependant, si la demande provient d'une commune urbaine ou si l'ouvrage a plus de 10 ans, REDAL assumera ces frais.)
+\item Évaluer et prévenir les risques de dysfonctionnement grâce à des processus bien définis, incluant des revues de direction et de contrat, un suivi des prestations, des audits sur les sites et chantiers, et des évaluations des fournisseurs.
+\item Garantir l'intégrité physique et la sécurité de nos agents où qu'ils soient et dans toutes les situations de travail
+\item Réduire le nombre d'accidents métiers et de circulation au travail ainsi que le nombre et la gravité des incidents enregistrés, en mettant en place des formations et des actions de prévention
+\item Limiter les nuisances olfactives.
+\ Item Réduire la pollution de l'air par les gaz à effet de serre.
+\item Améliorer les conditions sanitaires et la gestion des déchets 
+\item La dépollution des milieux naturels, la prévention de la pollution ainsi que la sensibilisation à la préservation de l'environnement.
+\item L'amélioration continue de nos processus, de nos technologies et de notre savoir-faire, afin de renforcer l'efficacité et la performance de notre société.
+\end{itemize}
+\newpage
+\section{Structure de Redal}
+\begin{center}
+\begin{tikzpicture}[sibling distance=9.5em,level distance=6em, every node/.style={shape=rectangle,draw,align=center}]
+   
+   \node{~\\ Directeur général \\~}
+   		child{
+   			node{Unité \\ Ressource Humaine \\~}
+   			}
+   		child{
+   			node{Unité \\ Exploitation Eau et \\ Assainissement}
+      			child{
+      					node{Direction \\ Exploitation \\ Assainissement}
+      				 }
+      			child{
+      					node{Direction \\ Exploitation Eau \\~}
+      					  child{
+      						node{Département \\ Exploitation}
+      								child{
+      									node{Structure \\ Qualité Eau \\~}
+      								}
+      								child{
+      									node{Structure \\ Grand Ouvrage \\~}
+      								}
+      								child{
+      									node{Structure \\ Gestion Technique \\ Réseau}
+      								}
+      							}
+      						child{
+      						node{Département \\ Maintenance}
+      							}
+      						child{
+      						node{Département \\ Branchement}
+      							}				
+      			}		
+      		}
+      	child{
+      		node{Unité \\  Système d'information \\~}
+      		}
+      	child{
+      		node{Unité \\ Unité Commercial \\~}
+      		};
+\end{tikzpicture}
+\end{center}
+\section{Les modes de gestion du service de l'eau potable au Maroc }
+
+\subsection{le secteur de la distribution de l'eau au Maroc}
+
+L'organisation effective des services publics au Maroc prend des formes différentes :
+
+\begin{itemize}
+\item Le premier mode de gestion possible est la régie : la commune exerce elle-même l'exploitation du service en fournissant le personnel et les moyens. La régie peut être directe ou autonome (à travers un opérateur public).
+\item La délégation constitue le second mode de gestion, les moyens du service sont alors, pour tout ou partie, fournis par un opérateur privé qui, en échange, gagne le droit d'exploiter le service (et sa clientèle captive) pendant une certaine durée.
+\end{itemize}
+
+Il existe deux formes de régies :
+
+\begin{itemize}
+\item \textbf{La régie directe} : Les petits centres urbains gèrent couramment leurs services d'eau et d'assainissement en régie directe, les communes exercent alors elles-mêmes l'exploitation et la gestion du service.
+\item \textbf{Les régies autonomes municipales} : sont des établissements publics communaux à caractère commercial et industriel et dotés de la personnalité morale et de l'autonomie financière, sous tutelle du Ministère de l'Intérieur.
+
+La Régie autonome est créée par délibération du Conseil communal ou du syndicat de Communes pour assurer la gestion de certains services publics locaux à l'intérieur du périmètre des Communes concernées.
+\end{itemize}
+\newpage
+\section{Distribution de l'eau potable de Redal}
+
+La distribution de l'eau potable par REDAL est un aspect essentiel des services publics au Maroc elle se fait à travers différents processus 
+L'eau fournie par REDAL vient directement de la source et de différents types d'eau tels que les barrages fluviaux, des rivières, etc. jusqu'aux ouvrages de distribution et puis finalement aux consommateurs.
+
+Dans les installations d'assainissement, divers types de réservoirs sont présents pour répondre à des besoins spécifiques et s'adapter aux caractéristiques topographiques de l'environnement :	
+
+\begin{itemize}
+\item \textbf{Les ouvrages enterrés} Un ouvrage enterré est une structure souterraine conçue pour diverses fonctions, comme le stockage d'eau, le traitement des eaux usées, ou le transport de réseaux de distribution, et ceux en étant situé sous la surface du sol. 
+Il existe différents types d’ouvrages enterré comme des réservoirs d'eau enterré qui stockent l'eau afin de la redistribuer. L'eau est pompée dans le réservoir lors des périodes de faible demande et ensuite pompée à partir de ce dernier pour satisfaire la demande lorsque celle-ci augmente. Cela permet de maintenir une pression constante dans le réseau de distribution.
+
+\item \textbf{Les Ouvrage Semi-Enterré} sont des structures partiellement enfouies dans le sol, ce qui signifie qu'une partie de l'ouvrage est située au-dessus du sol tandis que l'autre partie est enfouie en dessous. 
+Ces ouvrages sont conçus pour des applications spécifiques et présentent des avantages liés à la protection contre les éléments environnants tout en permettant un accès plus facile pour l'entretien et l'utilisation.
+
+Comme par exemple les Piscines semi-enterrées qui ont une partie de leur structure enterrée dans le sol, tandis que le reste est visible au-dessus du sol. Elles combinent les avantages d'une piscine enterrée en termes de stabilité et d'esthétique avec une installation plus rapide et moins coûteuse. On a aussi les Réservoirs semi-enterrés qui peuvent être utilisés pour stocker divers liquides, tels que l'eau potable, les produits chimiques ou les carburants. Une partie du réservoir est enterrée pour minimiser l'exposition aux conditions météorologiques tout en offrant un accès facile pour la surveillance et la maintenance
+Les ouvrages semi-enterrés offrent une flexibilité dans la conception et l'utilisation tout en tirant parti des avantages de la protection offerte par le sol. Leur conception dépend des besoins spécifiques de l'application et de la réglementation locales en matière de construction et d'urbanisme
+\item \textbf{Ouvrage Surélevé} sont des structures qui sont construites au-dessus du niveau du sol, ce qui signifie qu'elle est élevée par rapport à la surface environnante. Ce type d'ouvrage est conçu pour diverses fonctions et offre plusieurs avantages en matière de visibilité, de protection contre les inondations et d'accès.
+Comme par exemple les réservoirs d'eau surélevés qui sont construits en hauteur pour stocker de l'eau potable.
+
+L'élévation permet la création d'une pression naturelle dans le réseau de distribution, ce qui facilite l'acheminement de l'eau vers les consommateurs. De plus, l'emplacement surélevé peut réduire les risques de contamination.
+
+Il existe aussi des canalisations de distribution surélevées qui réfèrent généralement à des tuyaux, des conduites ou des canaux d'eau potable ou d'autres fluides qui sont élevés par rapport au sol ou situés au-dessus du niveau du sol. Ce type de configuration peut présenter certains avantages dans diverses situations, notamment en matière de protection contre les inondations, d'évitement d'obstacles au sol, de facilités d'entretien ou de distribution d'eau sous pression.
+
+Ces canalisations surélevées peuvent varier en termes de hauteur et de matériaux utilisés en fonction des besoins spécifiques de la situation. Elles sont généralement conçues pour garantir un approvisionnement en eau fiable, même dans des conditions environnementales ou topographiques complexes.
+\end{itemize}
+
+Dans certaines situations, l'utilisation d'une pompe est nécessaire pour surmonter les variations de niveau, avant que le système gravitaire ne prenne le relais. Le réservoir n'est jamais vraiment vide ou plein, il est surveillé en permanence par une équipe qui ajuste le débit en fonction des heures de pointe, lorsque la demande est plus élevée et le réduit lorsqu'elle est faible, contribuant ainsi à son remplissage.
+
+Le réservoir ne sert pas uniquement à réguler le débit d'eau entre la source et le réseau, il assure également l'autonomie du réseau en cas de panne entre la source et l'installation de distribution, ou pendant la maintenance du réseau. L'équipe veille à réduire le débit d'eau disponible pour éviter une interruption totale de l'approvisionnement.
+
+Cependant, le réservoir n'est pas simplement un réservoir d'eau que l'on remplit et injecte dans le réseau. Il est divisé en plusieurs sections, la plus basse étant réservée aux stocks d'eau pour les incendies, et il est strictement interdit d'y toucher, même en cas de coupure d'eau générale, car cette partie est exclusivement réservée aux interventions en cas d'incendie.
+
+On peut donc dire que le réservoir permet de :
+
+\begin{itemize}
+\item Assurer un approvisionnement en eau constant malgré les fluctuations de demande.
+\item Éviter les interruptions en cas de maintenance du réseau ou de problèmes techniques.
+\item Garantir une autonomie au réseau pour prévenir les pannes sèches.
+\item Répondre aux besoins des situations d'urgence, notamment en réservant une section pour les interventions liées aux incendies.
+\end{itemize}
+
+\section{Réseau de l'eau potable}
+
+Le réseau de distribution d'eau potable est une infrastructure complexe essentielle dans le but de fournir aux utilisateurs une quantité suffisante d'eau de haute qualité. Il se compose de plusieurs éléments interdépendants, chacun remplissant un rôle spécifique dans l'ensemble du système :
+
+\begin{itemize}
+\item \textbf{Les canalisations :} Ces conduites souterraines transportent l'eau depuis la source de production jusqu'aux usagers finaux. Elles sont dimensionnées pour acheminer un débit d'eau adéquat en fonction de la demande.
+\item \textbf{Les branchements :} Ils assurent le raccordement des usagers au réseau de distribution. Ces branchements sont classés en fonction de leur diamètre, ce qui détermine la capacité d'approvisionnement pour chaque utilisateur.
+\item \textbf{Les appareils de frontières :} Ces dispositifs, tels que les vannes et les ventouses, sont utilisés pour contrôler le flux de l'eau dans le réseau. Les ventouses permettent de purger l'air accumulé dans les conduites, assurant ainsi un fonctionnement efficace. Les bouches d'incendie sont des éléments essentiels pour les interventions d'urgence.
+\end{itemize}
+
+Les fonctions primaires d'un réseau d'eau potable incluent :
+
+\begin{itemize}
+\item \textbf{La production :} Cette phase implique le traitement de l'eau brute provenant de différentes sources (comme les rivières, les lacs ou les nappes phréatiques) pour la rendre propre à la consommation. Cela comprend la filtration, la désinfection et d'autres processus de purification.
+\item \textbf{Le stockage :} Les réservoirs d'eau, qui peuvent être enterrés ou surélevés, servent à stocker l'eau traitée. Ils permettent de gérer la demande variable, d'assurer une pression constante dans le réseau et de disposer d'une réserve en cas de besoin, comme en cas d'incendie ou de maintenance du réseau.
+\item \textbf{La distribution :} Cette phase consiste à acheminer l'eau depuis les réservoirs vers les utilisateurs finaux, en utilisant un réseau de canalisations et de branchements. Les dispositifs de contrôle et de surveillance sont essentiels pour maintenir une pression et un débit adéquats, assurant ainsi une distribution fiable aux consommateurs.
+\end{itemize}
+
+En somme, un réseau d'eau potable est une infrastructure complexe qui assure l'approvisionnement en eau de qualité pour répondre aux besoins quotidiens des habitants, tout en prévoyant des mesures pour faire face à des situations d'urgence et garantir une distribution efficace.
+
+\chapter{L'assainissement}
+
+L'assainissement joue un rôle essentiel en garantissant l'évacuation adéquate des eaux pluviales et usées tout en assurant leur déversement dans les exutoires naturels. Ils englobent différents types d'eau, chacun ayant un impact spécifique sur notre environnement.
+
+\section{Les eaux d'assainissement}
+
+\subsection{Eaux usées domestiques}
+
+Ce type d'eau provient des ménages, des institutions, et des établissements commerciaux. 
+
+Il comprend les eaux usées provenant des toilettes, des lavabos, des douches, des machines à laver et des éviers de cuisines. Les eaux usées domestiques contiennent des matières organiques, des bactéries, des produits chimiques ménagers et d'autres contaminants qui doivent subir un traitement bien spécifique.
+
+\subsection{Eaux usées industrielles}
+
+Ces eaux proviennent d'activités industrielles et commerciales. Elles peuvent contenir une grande variété de produits chimiques, de métaux lourds, de solvants et d'autres contaminants spécifiques à l'industrie concernée. 
+
+Le traitement des eaux usées industrielles est souvent plus complexe en raison de la diversité des polluants.
+
+\subsection{Eaux pluviales}
+
+Les eaux de pluie résultent de précipitations atmosphériques. Elles incluent l'eau de ruissellement provenant des routes, des toits, et des zones pavées. Ces eaux peuvent transporter des impuretés du sol, des métaux lourds provenant de la circulation routière, et d'autres contaminants.
+
+\subsection{Eaux grises}
+
+Les eaux grises proviennent des activités ménagères, à l'exclusion des toilettes. Elles englobent les eaux de lavage, de douche et de lavabos. Les eaux grises sont généralement moins chargées en matières organiques que les eaux usées domestiques.
+
+\section{Objectifs de l'assainissement pour ces types d'eaux}
+
+\begin{itemize}
+\item Assurer la collecte efficace des eaux usées domestiques et industrielles pour les traiter et éliminer les contaminants.
+\item Éviter la pollution des milieux naturels et préserver la qualité de l'eau.
+\item Gérer les eaux pluviales pour prévenir les inondations urbaines et la pollution des eaux de surface.
+\item Promouvoir le recyclage et la réutilisation de certaines eaux traitées dans un souci de durabilité.
+\end{itemize}
+
+L'assainissement doit adapter ses méthodes en fonction du type d'eau à traiter, garantissant ainsi une gestion appropriée de ses ressources essentielles tout en minimisant leur impact sur l'environnement et la santé publique.
+
+\section{Méthodes de traitements des eaux d'assainissement}
+
+Le traitement des différentes catégories d'eau, qu'elles soient domestiques, industrielles, pluviales, grises ou noires, est une démarche cruciale pour gérer efficacement les ressources en eau et minimiser l'impact sur l'environnement. Chacune de ces catégories d'eau a sa propre composition et ses propres défis, d'où la nécessité d'approches spécifiques pour les traités de manière appropriée :
+
+\paragraph{Les étapes clés du traitement des eaux comprennent :}
+\begin{enumerate}
+\item \textbf{Prétraitement :} C'est la première étape qui vise à éliminer les solides lourds, tels que les débris, les graviers et les sédiments. Cette phase permet de protéger les équipements de traitement ultérieur des obstructions.
+\item \textbf{Traitement biologique :} Pour les eaux usées domestiques et certaines eaux industrielles, le traitement biologique est essentiel. Il fait appel à des microorganismes pour décomposer les matières organiques et éliminer les nutriments. Cela contribue à purifier l'eau de manière naturelle.
+\item \textbf{Filtration :} La filtration est couramment utilisée pour éliminer les particules en suspension et autres matières en suspension dans l'eau. Elle peut être effectuée à l'aide de médias filtrants tels que le sable ou des membranes.
+\item \textbf{Désinfection :} La désinfection est une étape cruciale pour éliminer les bactéries pathogènes et garantir que l'eau traitée soit sûre pour les usagers. Les méthodes de désinfection incluent la chloration, l'irradiation UV, ou d'autres désinfectants chimiques.
+\end{enumerate}
+
+\paragraph{Pour les eaux usées industrielles :}
+
+Les eaux usées industrielles peuvent contenir une variété de contaminants spécifiques à l'industrie. Leur traitement peut nécessiter des procédés chimiques spécifiques, tels que la neutralisation des acides ou des bases, la précipitation de métaux lourds, ou d'autres réactions chimiques pour éliminer les polluants industriels.
+
+L'objectif ultime de ces étapes de traitement est de garantir que l'eau traitée réponde aux normes de qualité de l'eau établies et puisse être déversée en toute sécurité dans l'environnement, ou réutilisée de manière appropriée pour des usages non potables, tels que l'irrigation, contribuant ainsi à la préservation des ressources en eau et à la protection de la santé publique et de l'environnement.
+
+Le traitement des eaux peut être divisé en différentes étapes, généralement appelées "niveaux" de traitement, en fonction de la complexité et de l'efficacité du processus. Ces niveaux de traitement varient en fonction des objectifs spécifiques de qualité de l'eau que l'on cherche à atteindre. Voici une explication des différents niveaux de traitement :
+
+\begin{itemize}
+\item[Niveau 1] \textbf{Prétraitement :} Ce niveau de traitement est axé sur l'élimination des solides lourds, tels que les débris, les sédiments et les particules en suspension. Il vise principalement à protéger les équipements de traitement ultérieurs contre l'obstruction due à ces solides. Le niveau 1 est essentiel pour garantir le bon fonctionnement des systèmes de traitement plus avancés.
+\item[Niveau 2] \textbf{Traitement biologique :} Le traitement biologique est une étape clé pour éliminer les matières organiques présentes dans l'eau. Il s'appuie sur l'action de micro-organismes, tels que les bactéries, pour décomposer les contaminants organiques. Cette phase est essentielle pour purifier l'eau et réduire la charge en nutriments tels que l'azote et le phosphore.
+\item[Niveau 3] \textbf{Traitement avancé :} Le traitement de niveau 3 est le stade le plus avancé et vise à éliminer des contaminants spécifiques et à atteindre des objectifs de qualité d'eau plus stricts. Il peut inclure des processus de filtration avancés, des méthodes de désinfection plus efficaces, ainsi que des procédés chimiques pour éliminer des contaminants spécifiques. Le niveau 3 est souvent requis lorsque l'eau doit être traitée pour répondre à des normes de qualité très élevées, par exemple, pour la production d'eau potable ou le rejet dans des environnements sensibles.
+\end{itemize}
+
+Les niveaux de traitement sont choisis en fonction des besoins spécifiques du système d'approvisionnement en eau ou d'assainissement, des réglementations environnementales locales, ainsi que des objectifs de qualité de l'eau. Chaque niveau de traitement apporte une amélioration supplémentaire de la qualité de l'eau, permettant de répondre à des normes de qualité de plus en plus strictes.
+
+\begin{figure}[h]
+\centering{\includegraphics[scale=1]{Figure2.png}}
+\caption{}
+\end{figure}
+
+\section{Objectif de l’assainissement}
+
+\begin{itemize}
+\item Hygiène publique : Prévenir la propagation des maladies d'origine hydrique en collectant et évacuant efficacement les eaux usées.
+\item Protection de la santé : Éviter la contamination de l'eau potable en séparant les eaux usées des eaux de boisson.
+\item Protection de l'environnement : Réduire la pollution des cours d'eau et des écosystèmes en éliminant les contaminants avant le rejet dans la nature.
+\item Réduction des inondations : Gérer les eaux pluviales pour minimiser les inondations urbaines et les débordements des réseaux d'égout.
+\item Durabilité : Assurer une gestion durable de l'eau en optimisant son utilisation, en minimisant le gaspillage et en réduisant l'impact sur l'environnement.
+\end{itemize}
+
+\section{Les Contrainte de l'assainissement }
+
+Les contraintes liées à l'assainissement jouent un rôle essentiel dans la planification et la mise en œuvre de systèmes d'assainissement efficaces. Elles peuvent être regroupées en quatre catégories principales :
+
+\subsubsection{Contraintes techniques }
+\begin{enumerate}
+\item \textbf{Contrainte de pente :} Les réseaux d'assainissement collectif fonctionnent généralement en mode gravitaire, ce qui signifie que l'eau doit s'écouler naturellement. La contrainte de pente est essentielle pour garantir un écoulement efficace des eaux usées vers les stations d'épuration.
+\item Contrainte de pente : Les réseaux d'assainissement doivent être conçus de manière à collecter efficacement les eaux usées de toutes les habitations, en prenant en compte la variation des niveaux des bâtiments.
+\item \textbf{Contrainte d'accessibilité :} Il est essentiel de garantir l'accessibilité des réseaux d'assainissement pour permettre l'entretien et la maintenance réguliers, y compris le débouchage des canalisations.
+\item \textbf{Contrainte de qualité de l'ouvrage :} Les ouvrages d'assainissement doivent être construits avec des matériaux de qualité pour assurer leur pérennité et leur fonctionnement fiable.
+\end{enumerate}
+
+
+\subsection{Contraintes économiques}
+
+
+\begin{enumerate}
+\item \textbf{Coût de construction :} La mise en place d'un réseau d'assainissement collectif est généralement coûteuse en raison de la construction de canalisations, de stations de pompage, de stations d'épuration, etc.
+\item \textbf{Coût de l'épuration :} Le traitement des eaux usées avant leur rejet dans l'environnement implique également des coûts, notamment pour l'exploitation des stations d'épuration.
+\end{enumerate}
+
+\subsection{Contraintes urbanistiques}
+
+\begin{enumerate}
+\item \textbf{Caractéristiques géologiques et topographiques :} Les caractéristiques du sol et du relief des zones à urbaniser peuvent poser des défis techniques importants, notamment en ce qui concerne le creusement de tranchées pour les canalisations.
+\item \textbf{Structure urbaine :} La répartition de la population, la nature des habitations et la structure du tissu urbain peuvent influencer la complexité de la mise en place du réseau d'assainissement.
+\end{enumerate}
+
+\subsection{Contraintes liées au milieu naturel}
+
+\begin{enumerate}
+\item Écoulement des eaux superficielles : La gestion de l'écoulement des eaux de surface est cruciale pour prévenir les risques d'inondations et d'érosion.
+\item Caractéristiques du milieu récepteur : Le type de milieu naturel dans lequel les eaux usées seront rejetées détermine le niveau d'épuration nécessaire pour protéger cet environnement récepteur.
+\end{enumerate}
+
+La prise en compte de ces contraintes est essentielle pour concevoir des systèmes d'assainissement robustes et durables, en garantissant à la fois la protection de l'environnement, la santé publique et la gestion efficace des ressources en eau.
+
+\section{Sortie sur les chantiers}
+
+J'ai eu l'occasion d'assister aux réunions de quelques chantiers sur lesquels j'ai pu assister à la pose de canalisations d'eau potable, usées et pluviales. J'étais présent en tant qu'observateur uniquement mais très satisfait de pouvoir comprendre la réalité du terrain et mieux me représenter les différents réseaux, les contraintes des chantiers, les techniques de pose, les mesures de sécurité, les fournitures et engins.
+
+Lors d'une de mes sorties,j'ai pu observer les étapes de pose de canalisations :
+
+\begin{itemize}
+\item Creusement des Tranchées : Une fois le terrain prêt, les tranchées sont creusées pour accueillir les canalisations. Les tranchées doivent correspondre au plan de conception en termes de profondeur et de pente.
+\item Installation des Canalisations : Les canalisations, qu'elles soient en PVC, en fonte ou en d'autres matériaux, sont installées dans les tranchées conformément aux spécifications techniques. Elles sont généralement posées sur un lit de gravier et de pierre concassé sur un tissu appellé géotextile qui sert à agir comme une barrière filtrante empêchant les particules fines du matériau de remblai de pénétrer dans l'espace autour des canalisations. Cela maintient la perméabilité des canalisations en empêchant leur obstruction par des particules indésirables il permet aussi d'empêcher l'affaissement du matériau de remblai, le géotextile contribue à stabiliser les canalisations et à maintenir l'alignement correct.
+Les raccords et les joints sont soigneusement vérifiés pour éviter les fuites.
+\item Test de Pression : Avant de recouvrir les canalisations, un test de pression est effectué pour vérifier l'étanchéité du réseau. Cela garantit que les canalisations sont en bon état et qu'il n'y a pas de fuites.
+\item Remblaiement : Une fois que les canalisations ont passé avec succès le test de pression, les tranchées sont remblayées avec du matériau approprié, généralement du sable, pour protéger les canalisations et stabiliser le sol.
+\item Pose des Regards et Branchements : Les regards d'inspection et les branchements pour les habitations sont installés le long du réseau. Les regards permettent d'accéder aux canalisations pour l'entretien et la maintenance.
+\item Connexion aux Stations d'Épuration : Les canalisations sont connectées aux stations d'épuration ou aux bassins de rétention, où les eaux usées seront traitées avant leur rejet ou leur réutilisation.
+\end{itemize}
+\newpage
+\textbf{Ci-dessous quelques photos prises sur deux de ces chantiers :}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Figure3.png}
+\caption{Pose des graviers et pierres concassé}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Figure4.png}
+\caption{Géotextile}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Figure5.png}
+\caption{Pose de la conduite}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Figure6.png}
+\caption{}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Figure7.png}
+\caption{Pose de conduite}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Figure8.png}
+\caption{Remblaiement}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Figure9.png}
+\caption{Pose du géotextile}
+\end{figure}
+
+\textbf{Sortie sur un chantier de pose sans tranchée}\\
+J'ai aussi eu l'opportunité d'assister à une technique de pose nommée pose sans tranchée qui est utilisée dans une variété de situations où les méthodes de construction traditionnelles, qui impliquent l'ouverture de tranchées, ne sont pas pratique ou appropriée (Environnements Urbains Denses, traversée d'obstacles, pose en profondeur, situation environnementale sensible) et cela à travers la technique de fonçage qui consiste à insérer des tubes en acier dans le sol à l'aide d'un rail de guidage, évitant ainsi la nécessité d'ouvrir de longues tranchées. Le processus commence par la préparation d'un point d'accès, puis les tubes en acier sont poussés dans le sol, un par un, créant ainsi la canalisation souterraine. Pendant le fonçage, un alignement précis est maintenu grâce au rail de guidage, garantissant que les canalisations sont correctement positionnées en profondeur. Les déblais sont extraits à l'aide d'une hydro-cureuse, assurant la progression continue du processus.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{foncage.png}
+\caption{Technique de foncage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Figure11.png}
+\caption{}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Figure12.png}
+\caption{Hydrocureuse}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{Figure13.png}
+\caption{Pose regard de visite}
+\end{figure}
+
+
+\textbf{Sortie au sein d'une station d'épuration des eaux usées}
+J'ai eu l'opportunité de découvrir une station d'épuration des eaux usées, plus communément appelée \textbf{STEP}, qui est conçue pour traiter les eaux usées afin de les débarrasser des polluants, des matières organiques et des contaminants avant de les rejeter dans l'environnement ou de les réutiliser à des fins non potables. La STEP correspond à un traitement de niveau 2 des eaux usées.\\
+Voici comment fonctionne généralement une STEP :
+
+\begin{enumerate}
+\item \textbf{Collecte des Eaux Usées :} Les eaux usées, qui proviennent des ménages, des industries ou d'autres sources, sont collectées et dirigées vers la STEP par un réseau de canalisations d'égouts.
+\item \textbf{Prétraitement :} À leur arrivée à la STEP, les eaux usées subissent un prétraitement. Cela comprend généralement la séparation des solides lourds, tels que les débris et les sables, ainsi que le retrait de certains objets non désirés, comme des bâtons ou des plastiques.
+\item \textbf{Traitement Biologique :} Les eaux usées passent ensuite par un traitement biologique où des micro-organismes décomposent les matières organiques. Cette étape contribue à éliminer les nutriments tels que l'azote et le phosphore.
+\item \textbf{Filtration :} Après le traitement biologique, l'eau est souvent soumise à une filtration pour éliminer les particules en suspension restantes.
+\item \textbf{Désinfection :} Pour garantir la sécurité sanitaire de l'eau, une étape de désinfection est généralement effectuée. Cela peut inclure l'utilisation de chloration, d'irradiation UV ou d'autres agents désinfectants pour éliminer les bactéries pathogènes.
+\item \textbf{Rejet ou Réutilisation :} Une fois traitées, les eaux épurées sont soit rejetées dans le milieu naturel, généralement dans un cours d'eau ou dans la mer, tout en respectant des normes environnementales strictes, soit réutilisées pour des usages non potables, tels que l'irrigation.
+\end{enumerate}
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{Figure14.png}
+\end{center}
+\caption{}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{Figure15.png}
+\end{center}
+\caption{}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{Figure16.png}
+\end{center}
+\caption{}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=1]{Figure17.png}
+\end{center}
+\caption{}
+\end{figure}
+
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Conclusion}}
+
+Pour conclure ce rapport ce stage a été une occasion de m'immerger dans le monde du travail, de découvrir les méthodes et les techniques de travail au sein du monde professionnel.
+
+Mon stage au sein de \textbf{REDAL}, plus précisément au sein de la Direction Études et Travaux Eaux et Assainissement, a été extrêmement enrichissant. J'y ai acquis une précieuse expérience et me suis familiarisé avec le monde professionnel. 
+
+%%----------------------------------------------------------------------------------------
+%%	BIBLIOGRAPHY
+%%----------------------------------------------------------------------------------------
+%
+%\chapter*{Bibliography}
+%\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
+%\section*{Books}
+%\addcontentsline{toc}{section}{Books}
+%\printbibliography[heading=bibempty,type=book]
+%\section*{Articles}
+%\addcontentsline{toc}{section}{Articles}
+%\printbibliography[heading=bibempty,type=article]
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+%\cleardoublepage
+%\phantomsection
+%\setlength{\columnsep}{0.75cm}
+%\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+%\printindex
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
